@@ -6,5 +6,9 @@ export const globalSytles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.white,
         marginHorizontal: 16
+    },
+    row: {
+        flexDirection: 'row',
+        alignItems: 'center'
     }
 })

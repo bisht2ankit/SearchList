@@ -10,16 +10,20 @@ export const ImageListComponent = (props) => {
             <Image
                 key={index}
                 source={{ uri: item.link }}
-                style={[styles.image,{width: props.numColumns === 1 ? '100%' : '50%'}]}
+                style={[styles.image,{
+                    width: props.numColumns === 1 ? '100%' : '48%',
+                    marginLeft: props.numColumns === 1 ? 0 : '2%'
+                }]}
             />
         )
     }
     return (
         <View style={styles.listContainer}>
             <FlatList
-                data={props.images}
+                data={props.images.results}
                 renderItem={({ item, index }) => (renderItem(item, index))}
                 numColumns={props.numColumns}
+                key={props.numColumns}
                 keyExtractor={(item, index) => index.toString()}
                 onEndReached={props.loadMore}
                 onEndReachedThreshold={0.5}

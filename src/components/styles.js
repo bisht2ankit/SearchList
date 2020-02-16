@@ -13,7 +13,8 @@ export const styles = StyleSheet.create({
     },
     image: {
         height: 200,
-        marginBottom: 10
+        marginBottom: 10,
+        backgroundColor: colors.imageBackground
     },
     container: {
         flex: 1,
@@ -22,5 +23,16 @@ export const styles = StyleSheet.create({
     listContainer: {
         marginTop: 10,
         flex: 1
+    },
+    radioIcon: {
+        width: 20,
+        height: 20
+    },
+    radioView: {
+        marginTop: 10
+    },
+    text: {
+        marginLeft: 8,
+        color: colors.black
     }
 })
